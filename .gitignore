@@ -1,0 +1,66 @@
+# secrets & live financial data — never commit
+.env
+positions.json
+portfolio_history.json
+trades_log.json
+tracker.html
+daily_brief.json
+
+# python
+__pycache__/
+*.pyc
+
+# node
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+docs/node_modules/
+docs/package.json
+docs/package-lock.json
+docs/take_screenshots.js
+
+# cron / launchd auto-poll outputs
+news_log.txt
+news_error.txt
+breadth_results.json
+scan_log.txt
+scan_error.txt
+
+# daily scan output — ephemeral, regenerated each morning
+scan_results.json
+watchlist.json
+
+# full terminal output log — written by morning_run.py, read by Claude instead of truncated bash
+morning_run_log.txt
+
+# insider buying cache — regenerated daily, contains financial signals
+insider_cache.json
+
+# options flow cache — 4hr TTL, regenerated intraday
+options_flow_cache.json
+
+# claude code local config
+.claude/
+
+# mac
+.DS_Store
+
+# EDGAR 10-K cache (regenerated on demand)
+data/edgar_cache/
+backtest_results.json
+data/community_cache/
+data/innovation_cache/
+data/narrative_cache/
+
+# AI runtime state — regenerated
+ai_usage.json
+ai_briefing.json
+
+# per-user config + lock files
+user_config.json
+*.lock
+data/backtest_cache/
+macro_cache.json
+scan_explanations.json
+data/signals.db
+data/transcripts_cache/
